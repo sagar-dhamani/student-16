@@ -1,0 +1,15 @@
+$kind: http-request
+name: Retrieve a user
+method: GET
+url: '{{baseUrl}}/v1/users/:id'
+order: 1000
+pathVariables:
+  - key: id
+    value: '{{id}}'
+scripts:
+  - type: afterResponse
+    language: text/javascript
+    code: |-
+      pm.test("Status code is 200", function () {
+          pm.response.to.have.status(200);
+      });

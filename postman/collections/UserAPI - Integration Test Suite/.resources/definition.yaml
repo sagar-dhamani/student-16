@@ -1,0 +1,16 @@
+$kind: collection
+name: UserAPI - Integration Test Suite
+auth:
+  type: apikey
+  credentials:
+    - key: key
+      value: X-API-Key
+    - key: value
+      value: '{{apiKey}}'
+    - key: in
+      value: header
+variables:
+  - key: baseUrl
+    value: ''
+  - key: apiKey
+    value: ''
